@@ -1,0 +1,39 @@
+{% extends "index/layout.html" %}
+{% load static%}
+{% block main%}
+<title>MotionControlSystem</title>
+<link href = "{% static 'auto.css' %}" rel="stylesheet">
+</head>
+<body>
+
+<div id="loader"></div>
+  <div class ="motion-control">
+  <fieldset>
+  <legend id="head">Motion Control Parts</legend>
+  <div class="main">
+
+  <div class="button-1">
+  </div><p>Sensor</p>
+  <div class="button-1">
+  </div><p >Camera</p>
+ 
+  <div class="side">
+  <div class="button-1">
+  </div>
+  <p>Radar</p>
+  <div class="button-1">
+  </div><p>Sonar</p>
+  </div>
+  </div>
+</fieldset>
+</div>
+</div>
+<div class="bar">
+<p style="font-weight:bold">Applying algorithm and Checking for any error....</p>
+  <div id="myProgress">
+  <div id="myBar"></div>
+</div>
+</div>
+<p class="n">Please wait!...</p>
+<script src="{% static 'js/motion.js' %}"></script>
+{% endblock%}

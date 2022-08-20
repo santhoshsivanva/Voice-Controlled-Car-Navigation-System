@@ -1,0 +1,70 @@
+{% extends "index/layout.html" %}
+{% load static%}
+{% block main%}
+        <title>404:Page not Found</title>
+        <style>
+            body{
+                background-color: rgb(245, 245, 245);
+            }
+            .container{
+                width:300px;
+                height:290px;
+                display:flex;
+                flex-wrap:wrap;
+                align-content:center;
+                translate:transform(50%,50%);
+                background-color:coral;
+                border-radius:100px;
+            }
+
+            #image{
+              position:relative;
+              top:75%;
+              right:4.4%;
+            }
+
+            .text{
+                position:absolute;
+                display:block;
+                padding:50px;
+                margin-top:20px;
+                margin-right:60px;
+                text-align: center;
+            }
+           
+            .text-1{
+                display: flex;
+                width: 370px;
+                position: relative;
+                color: brown;
+                text-align: center;
+                font-style: italic;
+                font-weight:bold;
+                top:250px;
+                flex-wrap: wrap;
+            }
+
+        </style>
+    
+    </head>
+
+
+    <body>
+        <div class="container">
+        <div id ="image">
+            <img src="{% static 'images/Robot.png' %}" alt="404" height=300 width=300>
+        </div>
+
+        <div class="text">
+        <h1>OOPS!<h1>
+        <h4>Page not found!</h4>
+        </div>
+        <div class="text-1">
+            <p>What you're looking for may have been misplaced in Long Term Memeory</p>
+        </div>
+      
+    </div>
+    
+  
+{% endblock %}
+

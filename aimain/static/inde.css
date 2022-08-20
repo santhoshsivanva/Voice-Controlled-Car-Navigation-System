@@ -1,0 +1,73 @@
+body{
+    background-image: url("autonomous.jpg");
+    background-position:center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 500px;
+}
+
+.container-main{
+    border-radius: 50px;
+    background-image: linear-gradient(lightblue,white);
+    position:relative;
+    left:320px;
+    top:30px;
+   
+}
+
+.main{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 40px;
+    text-decoration: underline;
+    margin-left:10px;
+}
+#audio {
+    display: none;
+    background: darkblue;
+}
+
+.inner{
+    position:relative;
+    left:230px;
+}
+
+#butt{
+    margin-top:10px;
+}
+
+.block{
+    display:block;
+    padding-bottom:10px;
+
+}
+
+label[for="source"],p{
+    font-weight: bold;
+    color:brown;
+}
+
+#form{
+    position:relative;
+    left:220px;
+}
+
+#butt1{
+    margin:10px 0px 0px 0px;
+}
+
+div#time {
+    background-color: antiquewhite;
+    margin-left:100px;
+    position:absolute;
+    right:82%;
+    bottom: 510px;
+    width: 200px;
+    border-radius: 0px 60px 0px 60px;
+}
+
+.pra,.era{
+    text-align: center;
+}
+

@@ -1,0 +1,31 @@
+body{
+    background-image:url("manualpage.jpg");
+    background-size: cover;
+    background-position:center;
+    background-repeat: no-repeat;
+    height:120vh;
+    padding:25px;
+    
+}
+.container{
+    background-color: white;
+    text-align: center;
+    display:flex;
+    flex-wrap: nowrap;
+    height:230px;
+    width: 400px;
+    transform: translate(6%,50%);
+    border-radius: 25px;
+    margin-top: 100px;
+}
+
+#text{
+    padding-top: 10px;
+    padding-left:25px;
+    
+}
+
+#butt_ok{
+    margin-bottom: 30;
+    
+}

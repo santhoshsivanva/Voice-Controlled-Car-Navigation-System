@@ -1,0 +1,90 @@
+{% extends "index/layout.html" %}
+{% load static%}
+{% block main%}
+    <link rel="stylesheet" href="{% static 'inde.css' %}?{% now "U" %}">
+    <title>AI car</title>
+    </head>
+    <body>
+    <div class=" container-main col-lg-6">
+        <div class="inner">
+        <header class="main" class="animate__animated animate__animate__bounce">AI CAR</header>
+        <button type="button" id="neww" class="btn btn-dark btn-lg btn-block">Steady Mode</button><br>
+        <img src="{% static 'images/new.gif' %}" alt="img" width="170px" height="150px">
+        </div>
+
+
+
+        <form method ="POST" action="{% url 'check' %}">
+        <div id="form">
+
+            {% comment %} <p style="text-decoration: underline;">Choice your vehicle mode</p>
+            <input type="radio" id="vehicle1" name="vehicle" required>
+            <label for="vehicle1">Manual Mode</label>
+            <input type="radio" id="vehicle2" name="vehicle" required>
+            <label for="vehicle2">Automated Mode</label><br> {% endcomment %}
+            
+            {% csrf_token %}
+            <div class="block">
+            <label for="source">Source:</label><br>
+            <input type="text" placeholder="enter your source" value="{{source}}" name="source">
+            {% if issue == 1 %}
+            <p></p>
+            <p>*It shouldn't be empty and don't have numbers </p>
+            {% endif%}
+            </div>
+            <div class="block">
+            <label for="source">Destination: </label><br>
+            <input type="text" placeholder="enter your Destination" value="{{des}}" name="des">
+            {% if issue == 1 %}
+            <p></p>
+            <p>*It shouldn't be empty and don't have numbers </p>
+            {% endif %}
+            </div>
+            {% if issue == 1 %}
+            <input type="submit" value="Put into Database" id="butt1" style="margin-left:10px" class="btn btn-success" ></input>
+            {% endif%}
+            <p style="padding-top:15px">{{message}}</p>
+            </form>
+            </div>
+
+            <div class="block-butt" style="margin-left:180px">
+            {% if issue == 0 %}
+            <a href="{% url 'manual' %}" id="butt1" class="btn btn-primary active" role="button" aria-pressed="true">Manual mode</a>
+            <a href="{% url 'auto' %}" id="butt1" class="btn btn-primary active" role="button" aria-pressed="true">Automated Mode</a>
+            {% endif %}
+        </div>
+    </div>
+    <div id="time">
+    <p class="pra">{{day}}-{{month}}-{{year}}</p>
+    <p class="pra">{{hour}}:{{minutes}}:{{seconds}}</p>
+    </div>
+
+    <div class="new" style="
+    background-color: antiquewhite;
+    margin-left:100px;
+    position:absolute;
+    right:20px;
+    bottom: 510px;
+    width: 200px;
+    height: 75px;
+    border-radius: 60px 0px 60px 0px;">
+
+    <p class="era" style="text-align:center">Enegry: {{number}}%</p>
+    <p class="era1" style="text-align:center">Power: <span id="mai">ON</span></p>
+    </div>
+    <script>
+    function updated(data){
+        var data = JSON.parse("{{data|escapejs}}");
+        var i =1;
+        for(var x in data){
+            var one = x[x][0];
+            window.locationlat+String(i)=x[x][0];
+        }
+
+        for(vae y in data){
+            window.locationlon+String(i)=x[x][1];
+        }
+        
+    }
+</script>
+{% endblock %}

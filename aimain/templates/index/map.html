@@ -1,0 +1,55 @@
+{% extends "index/layout.html" %}
+{% load static %}
+{% block main%}
+<title>AI map</title>
+<head>
+    <link rel='stylesheet' type='text/css' href='https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.15.0/maps/maps.css'>
+    <script src="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.15.0/maps/maps-web.min.js"></script>
+    <script src="https://api.tomtom.com/maps-sdk-for-web/cdn/6.x/6.15.0/services/services-web.min.js"></script>
+
+    <style>
+        body, html { margin: 0; padding: 0; }
+        #map { margin-top:20px; 
+            width: 100vw; 
+            height: 80vh;
+            display:flex;
+            flex-wrap:wrap;
+         }
+   
+        #header{
+            text-align:center;
+            font-family: 'Times New Roman', Times, serif;
+            font-size:200;
+            font-weight:bold;
+            background-color: antiquewhite;
+            border-radius:50px;
+        }
+
+        #footer{
+            text-align:center;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight:bold;
+            color:red;
+            position:relative;
+            top:30px;
+            text-align:center;
+            background-color: antiquewhite;
+            border-radius:50px;
+        }
+    </style>
+</head>
+    <body>
+        <div id ="header">
+            <H2>Path Finding<H2>
+        </div>
+        <div id="map">
+
+        </div>
+
+        
+        <div id="footer">
+            <button onclick="createRoute()">Create Route</Button>
+            <h3>Safe Drive</h3>
+        </div>
+<script src={% static 'js/map.js' %} ></script>
+{% endblock %}

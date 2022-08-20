@@ -1,0 +1,70 @@
+body{
+    background-image: linear-gradient(to right,rgb(236, 211, 211), rgb(145, 199, 243));
+}
+
+.motion-control{
+    display:flex;
+    flex-wrap: wrap;
+    background-color: rgb(255, 232, 202);
+    width:500px;
+    height:300px;
+    position:relative;
+    left:100px;
+    transform:translate(60%,5%);
+    border-radius: 40px;
+
+}
+
+#head{
+font-weight: bold;
+background-color: whitesmoke;
+text-decoration:underline;
+border: black;
+text-align: center;
+margin-left:85px;
+}
+
+
+.button-1{
+    width:40px;
+    height:40px;
+    border-radius: 20px 20px 20px 20px;
+    background-color:rgb(241, 87, 87);
+    display:inline-block;
+}
+
+p{
+    font-size: 30px;
+    margin: 10px;
+    font-style: oblique;
+
+}
+
+
+.side{
+    position:relative;
+    left:400px;
+    bottom:210px;
+}
+
+.bar{
+    margin-top:60px;
+    margin-left:315px;
+}
+
+#myProgress {
+    border-radius: 50px;
+    width: 70%;
+    background-color: grey;
+  }
+  
+#myBar {
+    width: 5%;
+    height: 30px;
+    background-color: green;
+  }
+
+.n{
+    font-style: oblique;
+    text-align: center;
+}
